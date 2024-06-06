@@ -549,7 +549,6 @@ public class Master implements MasterInterface
       etherCATStateMachine.shutDown();
 
       soem.ecx_close(context);
-      soem.ecx_destroy_context(context);
       initialized = false;
    }
    
