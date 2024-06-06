@@ -122,6 +122,7 @@ class EtherCATStateMachine
          subdevices[i].cleanup();
       }
 
+      soem.ecx_close(master.getContext());
    }
 
 }
