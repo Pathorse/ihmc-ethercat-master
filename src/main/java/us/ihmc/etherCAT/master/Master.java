@@ -547,6 +547,10 @@ public class Master implements MasterInterface
       
       getEtherCATStatusCallback().trace(TRACE_EVENT.STOP_HOUSEHOLDER);
       etherCATStateMachine.shutDown();
+
+      soem.ecx_close(context);
+      soem.ecx_destroy_context(context);
+      initialized = false;
    }
    
    /**
